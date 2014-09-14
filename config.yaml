@@ -1,0 +1,6 @@
+---
+metadataformat: "yaml"
+baseurl: "http://rubyinstaller.org"
+# TODO: theme
+# theme: "rubyinstaller"
+title: "RubyInstaller for Windows"
