@@ -1,5 +1,39 @@
+<!doctype html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>{{ .Title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- This script is the defacto way to enable use of HTML5 elements in legacy Internet Explorer -->
+    <!--[if lt IE 9]>
+      <script src="scripts/vendor/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Font Awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Theme -->
+    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/main.css">
   </head>
+
   <body>
+    <!--[if lte IE 7]>
+        <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="main-container">
+
+      <nav class="main-navigation">
+        <img class="logo" src="https://avatars0.githubusercontent.com/u/54774?v=2&s=400">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Download</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Contribute</a></li>
+        </ul>
+      </nav>
