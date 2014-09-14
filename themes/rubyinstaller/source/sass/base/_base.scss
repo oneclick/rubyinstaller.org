@@ -1,0 +1,52 @@
+// -------------------------------------------
+//   Base
+//     -> Base styles
+// -------------------------------------------
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: $open-sans;
+  color: $font-base;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: $font-light;
+}
+
+h4, h5, h6 {
+  color: $font-dark;
+}
+
+p {
+  font-size: 14px;
+}
+
+a {
+  font-size: 14px;
+  color: $font-dark;
+
+  &:hover {
+    color: midnightblue;
+  }
+  &:visited {
+    color: purple;
+  }
+}
+
+code {
+  &:not([class*="language-"]) {
+    font-size: 11px;
+    padding: 3px 5px;
+    background: #eee;
+    color: #666;
+  }
+}

@@ -1,0 +1,84 @@
+// ----------------------------------------------------------------------
+//   Nitty Grid
+//   > Semantic grid based on griddle (https://github.com/necolas/griddle)
+//   > Examples and documentation: https://github.com/roperzh/nitty-grid
+// ----------------------------------------------------------------------
+
+// -------------------------------------------
+//   Variables
+// -------------------------------------------
+
+$grid-direction: left !default; // switch to 'right' for rtl
+$grid-gutter: 20px !default; // can be px, em, or %
+$columns: one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve;
+
+// -------------------------------------------
+//   Grid Core
+// -------------------------------------------
+
+/**
+ * Grid container
+ * Must only contain `.grid`, `.column` or `columns` components as children.
+ */
+
+.grid {
+    display: block;
+    padding: 0;
+    // margin: 0 -0.5 * $grid-gutter;
+    text-align: $grid-direction;
+    letter-spacing: -0.31em;
+    text-rendering: optimizespeed;
+}
+
+/**
+ * Opera hack
+ */
+
+.opera:-o-prefocus,
+.grid {
+    word-spacing: -0.43em; /* 3 */
+}
+
+/**
+ * Child `grid` object adjustments
+ * Used for more complex fixed-fluid hybrid grids.
+ */
+
+.grid > .grid {
+    overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+// -------------------------------------------
+//   Columns
+// -------------------------------------------
+
+.column, .columns {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block; /* 1 */
+    margin: 0;
+    padding: 0 0.5 * $grid-gutter; /* 2 */
+    vertical-align: top; /* 3 */
+    text-align: $grid-direction; /* 4 */
+    letter-spacing: normal; /* 5 */
+    word-spacing: normal; /* 5 */
+    text-rendering: auto; /* 5 */
+}
+
+/**
+ * Loop through column names and make a specific class
+ * for each one
+ */
+
+@each $column in $columns {
+  $index: index($columns, $column);
+
+  .#{$column} {
+    @include breakpoint(notsmall) {
+        width: #{($index / 12) * 100%};
+    }
+  }
+}

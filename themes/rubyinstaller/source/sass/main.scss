@@ -1,0 +1,91 @@
+// *************************************
+//   Application
+// *************************************
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+@import "mixins/breakpoint";
+@import "mixins/standard-backgrounds";
+@import "mixins/clearfix";
+
+// -------------------------------------
+//   Vendor
+// -------------------------------------
+
+@import "vendor/normalize";
+@import "vendor/nitty-grid";
+@import "vendor/prism";
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+@import "base/variables";
+@import "base/base";
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+@import "states/emphasis";
+
+// -------------------------------------
+//   Layouts
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+@import "modules/entry";
+@import "modules/demo-styles";
+@import "modules/button";
+@import "modules/label";
+
+.center-text {
+  text-align: center;
+}
+
+.main-navigation {
+  height: 70px;
+
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    display: inline-block;
+
+    list-style: none;
+    line-height: 70px;
+
+    font-size: 13px;
+
+    @include clearfix();
+
+    li {
+      margin: 0 10px;
+      float: left;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-size: inherit;
+    }
+  }
+
+  .logo {
+    height: 70px;
+  }
+}
+
+#main-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100%;
+}

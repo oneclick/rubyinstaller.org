@@ -1,0 +1,21 @@
+// -------------------------------------------
+//   Standard backgrounds mixin
+// -------------------------------------------
+
+@mixin standard-backgrounds {
+  &.light {
+    background: $light-button;
+  }
+  &.notice {
+    background: $notice;
+  }
+  &.warning {
+    background: $warning;
+  }
+  &.success {
+    background: $success;
+  }
+  &.error {
+    background: $error;
+  }
+}

@@ -1,0 +1,23 @@
+// -------------------------------------------
+//   Button
+// -------------------------------------------
+
+.button {
+  display: inline-block;
+  padding: 4px 12px;
+
+  text-decoration: none;
+  font-weight: bolder;
+  color: $font-white!important;
+
+  @include standard-backgrounds();
+
+  &.rounded {
+    border-radius: 12px;
+  }
+
+  i {
+    margin: 0 5px 0 0;
+  }
+}
+
