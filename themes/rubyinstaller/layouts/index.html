@@ -5,6 +5,7 @@
 
 <section>
   <h1>Recent News</h1>
+  <!-- TODO: Find better ways so we can use custom views instead -->
   {{ range $name, $pages := .Site.Sections }}
     {{ if eq $name "news" }}
       {{ range first 5 $pages }}
