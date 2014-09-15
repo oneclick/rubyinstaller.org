@@ -1,0 +1,16 @@
+<!-- news article -->
+{{ template "theme/partials/header.html" . }}
+
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
+      {{ .Date.Format "January 2, 2006" }}
+    </time>
+    <p>by {{ .Params.author }}</p>
+  </header>
+
+  {{ .Content }}
+</article>
+
+{{ template "theme/partials/footer.html" . }}

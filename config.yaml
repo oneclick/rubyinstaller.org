@@ -2,6 +2,8 @@
 metadataformat: "yaml"
 baseurl: "http://rubyinstaller.org"
 canonifyurls: false
+permalinks:
+  news: /news/:year/:month/:day/:slug
 # TODO: complete theme
 theme: "rubyinstaller"
 title: "RubyInstaller for Windows"
