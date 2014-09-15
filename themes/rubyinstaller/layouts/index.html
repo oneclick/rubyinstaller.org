@@ -5,9 +5,20 @@
 
 <section>
   <h1>Recent News</h1>
-  <ul>
-    <!-- TODO: list last 5 news articles -->
-  </ul>
+  {{ range $name, $pages := .Site.Sections }}
+    {{ if eq $name "news" }}
+      {{ range first 5 $pages }}
+        <article>
+          <h1><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h1>
+          <p>{{ .Page.Summary }}</p>
+          <time datetime="{{ .Page.Date.Format "2006-01-02T15:04:05-07:00" }}">
+            {{ .Page.Date.Format "January 2, 2006" }}
+          </time>
+          <a href="{{ .Page.Permalink }}">Read more</a>
+        </article>
+      {{ end }}
+    {{ end }}
+  {{ end }}
 </section>
 
 {{ partial "footer.html" . }}
