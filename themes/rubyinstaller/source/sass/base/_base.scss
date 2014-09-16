@@ -43,7 +43,7 @@ a {
 }
 
 code {
-  &:not([class*="language-"]) {
+  &:not([class*="hljs"]) {
     font-size: 11px;
     padding: 3px 5px;
     background: #eee;
