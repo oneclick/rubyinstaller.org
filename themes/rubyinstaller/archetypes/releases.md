@@ -1,5 +1,9 @@
 ---
 title: ""
+docs_url: ""
+docs_size: 0
+docs_md5: ""
+docs_sha256: ""
 installer_x86_url: ""
 installer_x86_size: 0
 installer_x86_md5: ""
