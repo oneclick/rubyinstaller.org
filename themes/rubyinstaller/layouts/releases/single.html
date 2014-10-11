@@ -1,0 +1,33 @@
+<!-- release article -->
+{{ partial "header.html" . }}
+
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
+      {{ .Date.Format "January 2, 2006" }}
+    </time>
+  </header>
+
+  <section>
+    <h1>Release notes</h1>
+
+    {{ .Content }}
+  </section>
+  
+  <section>
+    <h1>Downloads</h1>
+    <!-- TODO: not sure if this should be ul or probably a table? -->
+    <ul class="downloads">
+      {{ range $item := .Params.params.files }}
+        <li>
+          <a class="{{ $item.type }}" href="{{ $item.url }}">{{ $item.title }}</a>
+          ({{ with $item.md5 }}<code>md5: {{ . }}</code>{{ end }}
+          {{ with $item.sha256 }}<code>sha256: {{ . }}</code>{{ end }})
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+</article>
+
+{{ partial "footer.html" . }}

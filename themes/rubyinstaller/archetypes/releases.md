@@ -1,23 +1,35 @@
 ---
 title: ""
-docs_url: ""
-docs_size: 0
-docs_md5: ""
-docs_sha256: ""
-installer_x86_url: ""
-installer_x86_size: 0
-installer_x86_md5: ""
-installer_x86_sha256: ""
-installer_x64_url: ""
-installer_x64_size: 0
-installer_x64_md5: ""
-installer_x64_sha256: ""
-package_x86_url: ""
-package_x86_size: 0
-package_x86_md5: ""
-package_x86_sha256: ""
-package_x64_url: ""
-package_x64_size: 0
-package_x64_md5: ""
-package_x64_sha256: ""
+params:
+  files:
+    - title: "Installer (x86)"
+      type: installer
+      size: ""
+      url: ""
+      md5: ""
+      sha256: ""
+    - title: "Installer (x64)"
+      type: installer
+      size: ""
+      url: ""
+      md5: ""
+      sha256: ""
+    - title: "Binary (x86)"
+      type: binary
+      size: ""
+      url: ""
+      md5: ""
+      sha256: ""
+    - title: "Binary (x64)"
+      type: binary
+      size: ""
+      url: ""
+      md5: ""
+      sha256: ""
+    - title: "Documentation"
+      type: docs
+      size: ""
+      url: ""
+      md5: ""
+      sha256: ""
 ---
