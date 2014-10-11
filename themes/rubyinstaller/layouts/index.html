@@ -5,20 +5,15 @@
 
 <section>
   <h1>Recent News</h1>
-  <!-- TODO: Find better ways so we can use custom views instead -->
-  {{ range $name, $pages := .Site.Sections }}
-    {{ if eq $name "news" }}
-      {{ range first 5 $pages }}
-        <article>
-          <h1><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></h1>
-          <p>{{ .Page.Summary }}</p>
-          <time datetime="{{ .Page.Date.Format "2006-01-02T15:04:05-07:00" }}">
-            {{ .Page.Date.Format "January 2, 2006" }}
-          </time>
-          <a href="{{ .Page.RelPermalink }}">Read more</a>
-        </article>
-      {{ end }}
-    {{ end }}
+  {{ range first 5 (where .Data.Pages "Section" "news") }}
+    <article>
+      <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+      <p>{{ .Summary }}</p>
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+      <a href="{{ .RelPermalink }}">Read more</a>
+    </article>
   {{ end }}
 </section>
 
