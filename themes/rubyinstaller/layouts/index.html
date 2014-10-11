@@ -17,4 +17,15 @@
   {{ end }}
 </section>
 
+<section>
+  <h1>Latest releases</h1>
+  <ul>
+    {{ range first 5 (where .Data.Pages "Section" "releases") }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+
 {{ partial "footer.html" . }}
