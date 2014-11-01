@@ -4,6 +4,13 @@ rescue LoadError
   abort "Please `gem install bundler` first."
 end
 
+desc "Generate site"
+task :build => [:hugo] do
+  sh "hugo"
+end
+
+task :default => [:build]
+
 desc "Obtain Hugo executable for your platform"
 task :hugo do
   # TODO
