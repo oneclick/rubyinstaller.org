@@ -6,8 +6,8 @@ This repository holds the codebase, content and structure of
 
 ## Get It!
 
-For regular development, you only need [Hugo](http://hugo.spf13.com) to be
-installed.
+For regular development, you only need [Ruby](http://rubyinstaller.org) to be
+installed. This project will automatically fetch Hugo's dependency.
 
 If you plan to introduce modifications to the theme used by the website, you
 will require installation of A, B and C (**TODO**).
@@ -22,7 +22,7 @@ cd rubyinstaller.org
 You can now build your local copy and run the preview server:
 
 ```console
-make preview
+rake preview
 ```
 
 Which will watch for changes and allow you see them locally at
