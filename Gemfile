@@ -1,5 +1,6 @@
-source "http://rubygems.org"
+ruby "2.1.4"
 
-ruby "2.1.3"
+source "https://rubygems.org"
 
-gem "sass", "~> 3.4.4"
+gem "rake", "~> 10.3.2"
+gem "sass", "~> 3.4.7"
