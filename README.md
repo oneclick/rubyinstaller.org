@@ -1,5 +1,15 @@
 # rubyinstaller.org
 
+## Important
+
+This codebase host what we would like to call *upcoming* website for
+RubyInstaller project, but is not live at this time.
+
+If you want to report issues with current site, please use RubyInstaller's
+[issue tracker](https://github.com/oneclick/rubyinstaller/issues) instead.
+
+---
+
 This repository holds the codebase, content and structure of
 [rubyinstaller.org](http://rubyinstaller.org) website, built with
 [Hugo](http://hugo.spf13.com) and (**TODO**)
