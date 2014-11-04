@@ -64,9 +64,9 @@ heroku open
 ## TODOs
 
 - [ ] Data structure
-  - [ ] Releases
+  - [x] Releases
   - [ ] DevKits
-  - [ ] News
+  - [x] News
 - [ ] Theme and instructions
 - [ ] Custom Buildpack for Heroku
 - [ ] Contributing guidelines
