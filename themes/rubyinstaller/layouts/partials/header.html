@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- This script is the defacto way to enable use of HTML5 elements in legacy Internet Explorer -->
-    <!--[if lt IE 9]>
-      <script src="scripts/vendor/html5shiv.js"></script>
-    <![endif]-->
+      {{ "<!--[if lt IE 9]>" | safeHtml }}
+        <script src="/js/vendor/html5shiv.js"></script>
+      {{ "<![endif]-->" | safeHtml }}
 
     <!-- Font Awesome -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -22,11 +22,11 @@
   </head>
 
   <body>
-    <!--[if lte IE 7]>
-        <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser.
-        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    {{ "<!--[if lte IE 7]>" | safeHtml }}
+      <p>
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    {{ "<![endif]-->" | safeHtml }}
 
     <div id="main-container">
 
