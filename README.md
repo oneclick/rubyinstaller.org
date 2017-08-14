@@ -2,11 +2,11 @@
 
 ## Important
 
-This codebase host what we would like to call *upcoming* website for
-RubyInstaller project, but is not live at this time.
+This codebase is an unfinished attempt to build a static website for the RubyInstaller project.
+The live website is based on this repository: https://github.com/oneclick/rubyinstaller.org-website
 
-If you want to report issues with current site, please use RubyInstaller's
-[issue tracker](https://github.com/oneclick/rubyinstaller/issues) instead.
+If you want to report issues with current site, please use it's
+[issue tracker](https://github.com/oneclick/rubyinstaller.org-website/issues).
 
 ---
 
